@@ -1,12 +1,14 @@
-import React from 'react';
+// Import the Recact and ReactDOM libraries
+import React from 'react'; // note the naming convention
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// Create React component
+const App = function () { //or use the ES2015 syntax of '() =>'
+  return <div>Hi there!!!</div>
+};
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// Take the React component and show it on the screen
+ReactDOM.render(
+  <App />,
+  document.querySelector('#root')
+);
